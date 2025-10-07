@@ -1,0 +1,44 @@
+@font-face {
+        font-family: 'Title-Font';
+        src: url('../fonts/Anecor_Gheroos_TTF.ttf');
+    }
+
+    #header{
+        font-family: 'Title-Font', sans-serif;
+        display: flex; 
+        justify-content: center; 
+        align-items: center; 
+        width: 100%; 
+        background-color: #9bd2b2; 
+        padding: 20vh 0px; 
+        gap: 30px;
+    }
+
+    #Var{
+        font-size: 1.5rem;
+    }
+
+    #ianKaplan{
+        font-size: 2rem;
+    }
+
+    #student{
+        font-size: 1.2rem;
+    }
+
+    .intro-container{
+        width: 100%;
+        height: 80vh;
+        background-color: #f0f0f0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+
+    #hello{
+        font-family: 'Title-Font', sans-serif;
+        font-size: 2rem;
+        color: #9bd2b2;
+        margin: 0;
+    }
