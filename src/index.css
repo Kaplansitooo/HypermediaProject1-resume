@@ -10,35 +10,70 @@
         align-items: center; 
         width: 100%; 
         background-color: #9bd2b2; 
-        padding: 20vh 0px; 
+        padding: 10vh 0px; 
         gap: 30px;
     }
 
     #Var{
-        font-size: 1.5rem;
+        font-size: 45px;
     }
 
     #ianKaplan{
-        font-size: 2rem;
+        font-size: 52px;
+        color: #f0f0f0;
+    }
+
+    #igual{
+        font-size: 32px;
     }
 
     #student{
-        font-size: 1.2rem;
+        font-size: 29px;
     }
 
-    .intro-container{
-        width: 100%;
-        height: 80vh;
-        background-color: #f0f0f0;
+    #logos{
         display: flex;
         justify-content: center;
         align-items: center;
         gap: 20px;
+        padding: 20px 0;
+        padding-top: 50px;
+        background-color: #f0f0f0;
+    }
+
+    .logo{
+        width: 80px;
+        height: 80px;
+        object-fit: contain;
+    }
+
+    .intro-container{
+        width: 100%;
+        height: 60vh;
+        background-color: #f0f0f0;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 25px;
+    }
+
+    #profile-pic{
+        width: 250px;
+        height: 250px;
+        border-radius: 0%;
+        margin: 0;
     }
 
     #hello{
         font-family: 'Title-Font', sans-serif;
-        font-size: 2rem;
+        font-size: 3rem;
         color: #9bd2b2;
+        margin: 0;
+    }
+
+    #description{
+        font-size: 20px;
+        max-width: 450px;
         margin: 0;
     }
