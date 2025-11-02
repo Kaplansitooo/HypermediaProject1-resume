@@ -1,17 +1,58 @@
-const buttons = document.querySelectorAll('.button');
-buttons.forEach((button) => {
-  let target = button.querySelector('.target');
-  function handleMove(e) {
-    const x = -50 + (e.pageX - button.offsetLeft - 700 / 2) / 3;
-    const y = -10 + (e.pageY - button.offsetTop - 200 / 2) / 3;
+document.getElementById("download-btn").addEventListener("click", () => {
+  const link = document.createElement("a");
+  link.href = "resume.pdf";
+  link.download = "../cvIanKaplan.pdf";
+  link.click();
+});
 
-    target.style.setProperty('--x', `${ x }px`)
-    target.style.setProperty('--y', `${ y }px`)
-  }
-  button.addEventListener('mousemove', (e) => {
-    handleMove(e);
+const circles = document.querySelectorAll('.circle');
+const centerContent = document.getElementById('center-content');
+const defaultCenter = document.getElementById('default-center');
+
+
+let activeTimeout = null;
+
+circles.forEach(circle => {
+  circle.addEventListener('mouseenter', () => {
+    const text = circle.getAttribute('data-content');
+    if (activeTimeout) clearTimeout(activeTimeout);
+    centerContent.innerHTML = text;
+    centerContent.style.opacity = 1;
   });
-  button.addEventListener('touchmove', (e) => {
-    handleMove(e.changedTouches[0]);
+
+  circle.addEventListener('mouseleave', () => {
+    activeTimeout = setTimeout(() => {
+      centerContent.style.opacity = 0;
+      defaultCenter.style.opacity = 1;
+    });
   });
 });
+
+const dynamicEl = document.getElementById('student-dynamic');
+const phrases = [
+  "Computer science student;",
+  "Passionate about technology;",
+  "Always learning and creating;"
+];
+let i = 0, j = 0, isDeleting = false;
+
+function typeEffect() {
+  const current = phrases[i];
+  if (!isDeleting && j < current.length) {
+    dynamicEl.textContent = current.substring(0, j + 1);
+    j++;
+    setTimeout(typeEffect, 100);
+  } else if (isDeleting && j > 0) {
+    dynamicEl.textContent = current.substring(0, j - 1);
+    j--;
+    setTimeout(typeEffect, 50);
+  } else if (!isDeleting && j === current.length) {
+    setTimeout(() => isDeleting = true, 1000);
+    setTimeout(typeEffect, 1000);
+  } else if (isDeleting && j === 0) {
+    isDeleting = false;
+    i = (i + 1) % phrases.length;
+    setTimeout(typeEffect, 300);
+  }
+}
+typeEffect();

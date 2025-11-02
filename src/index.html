@@ -1,42 +1,91 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ian Kaplan Resumee</title>
-    <link rel="stylesheet" href="index.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ian Kaplan Resume</title>
+  <link rel="stylesheet" href="index.css">
 </head>
 <body>
-    <div id="header" >
-        <h1 id="Var">Var </h1>
-        <h1 id="ianKaplan" ><b><i>ianKaplan</i></b></h1>
-        <h2 id="igual">=</h2>
-        <h2 id="student" >Computer science student ;</h2>
+  <div id="header">
+    <h1 id="Var">Var</h1>
+    <h1 id="ianKaplan"><b><i> IanKaplan </i></b></h1>
+    <h2 id="igual">=</h2>
+    <h2 id="student-static"> </h2>
+    <h2 id="student-dynamic" class="typing"></h2>
+  </div>
+
+  <div id="logos">
+    <img class="logo" src="../img/c++.png" alt="C++ Logo">
+    <img class="logo" src="../img/logo_java.png" alt="Java Logo">
+    <img class="logo" src="../img/python.png" alt="Python Logo">
+    <img class="logo" src="../img/html.png" alt="HTML Logo">
+    <img class="logo" src="../img/css.png" alt="CSS Logo">
+    <img class="logo" src="../img/javascript.png" alt="JavaScript Logo">
+    <img class="logo" src="../img/docker.png" alt="Docker Logo">
+    <img class="logo" src="../img/php.png" alt="PHP Logo">
+    <img class="logo" src="../img/git.png" alt="Git Logo">
+  </div>
+
+  <div class="intro-container">
+    <img id="profile-pic" src="../img/male_profile.png" alt="Profile Picture">
+    <div id="intro-text">
+      <p id="description">
+        <span id="hello">Hello! </span> I'm Ian Kaplan, and I strive to turn ideas into innovative solutions as I build my career in programming.
+        I am passionate about solving logical and complex problems using programming and analytical thinking.
+      </p>
     </div>
-    <div id="logos">
-        <img class="logo" src="../img/c++.png" alt="C++ Logo">
-        <img class="logo" src="../img/logo_java.png" alt="Java Logo">
-        <img class="logo" src="../img/python.png" alt="Python Logo">
-        <img class="logo" src="../img/html.png" alt="HTML Logo">
-        <img class="logo" src="../img/css.png" alt="CSS Logo">
-        <img class="logo" src="../img/javascript.png" alt="JavaScript Logo">
-    </div>
-    <div class="intro-container">
-        <img id="profile-pic" src="../img/male_profile.png" alt="Profile Picture">
-        <div id="intro-text">
-            <p id="description"><span id="hello">Hello! </span>, I'm Ian Kaplan, and I strive to 
-                turn ideas into innovative solutions as I build my career in programming. I am 
-                passionate about solving logical and complex problems using programming and analytical thinking.</p>
-        </div>
-    </div>
-    <div class="button">
-        <div class="pattern">
-            <div class="target inner bg4"></div>
-        </div>
-        <div class="text">Download my resume <i>HERE!</i></div>
-        <script type="text/javascript" src="index.js"></script>
+  </div>
+
+  <button class="download-btn" id="download-btn">Download Resume</button>
+
+  
+
+  <div id="circle-section">
+    <div id="center-content">
+      <h2 id="hoverASection">HOVER A SECTION</h2> 
+      <img id="center-image" src="../img/male_profile.png" alt="Center Image">
     </div>
 
-    
+    <div class="circle" id="circle1" data-title="ACADEMIC BACKGROUND" data-content="
+      <b>Scientific-Technological Baccalaureate</b> | 2020 - 2022<br>
+      Institut Giola (Llinars)<br><br>
+      <b>Double Degree in Computer Engineering and Video Game Design</b> | 2022 - 2023<br>
+      Tecnocampus University (Mataró)<br><br>
+      <b>Bachelor’s Degree in Computer Engineering</b> | In progress<br>
+      University of Girona
+    "><b>ACADEMIC<br>BACKGROUND</b></div>
+
+    <div class="circle" id="circle2" data-title="WORK EXPERIENCE" data-content="
+      <b>Jewish Community Atid of Catalonia</b> | 2020 - Present<br>
+      Design and execution of activities for children (ages 9-16).<br>
+      Coordination and management of activity leaders.<br><br>
+      <b>Nike Outlet BigBox, La Roca Village</b> | 2022 - 2023<br>
+      Warehouse assistant and in-store support.<br><br>
+      <b>Starbucks, La Roca Village</b> | 2023 - 2024<br>
+      Barista and order management.
+    "><b>WORK<br>EXPERIENCE</b></div>
+
+    <div class="circle" id="circle3" data-title="LANGUAGES" data-content="
+      Catalan - Native<br>
+      Spanish - Native<br>
+      Hebrew - B2<br>
+      English - B2
+    "><b>LANGUAGES</b></div>
+
+    <div class="circle" id="circle4" data-title="CONTACT" data-content="
+      Ian Kaplan Corani<br>
+      03/21/2004<br>
+      08440 Cardedeu, Barcelona<br>
+      <b>Email:</b> mriankaplan@gmail.com<br>
+      <b>Phone:</b> +34 640 959 533
+    "><b>CONTACT</b></div>
+
+    <div class="circle" id="circle5" data-title="PROFILE" data-content="
+      Computer Engineering student passionate about technology, design, and problem-solving. I aim to develop projects that combine creativity and programming.
+    "><b>PROFILE</b></div>
+  </div>
+
+  <script src="index.js"></script>
 </body>
 </html>
