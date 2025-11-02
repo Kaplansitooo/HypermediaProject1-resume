@@ -1,11 +1,11 @@
 @font-face {
   font-family: "Title-Font";
-  src: url("../fonts/Anecor_Gheroos_TTF.ttf");
+  src: url("./fonts/Anecor_Gheroos_TTF.ttf");
 }
 
 @font-face {
   font-family: "Text-Font";
-  src: url("../fonts/TheStudentsTeacher-Regular.ttf");
+  src: url("./fonts/TheStudentsTeacher-Regular.ttf");
 }
 
 body {

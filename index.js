@@ -1,12 +1,10 @@
-// --- CV DOWNLOAD ---
 document.getElementById("download-btn").addEventListener("click", () => {
   const link = document.createElement("a");
-  link.href = "../cvIanKaplan.pdf";
+  link.href = "./cvIanKaplan.pdf";
   link.download = "cvIanKaplan.pdf";
   link.click();
 });
 
-// --- CIRCLES BEHAVIOR ---
 const circles = document.querySelectorAll(".circle");
 const defaultCenter = document.getElementById("default-center");
 const dynamicContent = document.getElementById("dynamic-content");
@@ -30,7 +28,6 @@ circles.forEach((circle) => {
   });
 });
 
-// --- DYNAMIC TYPING EFFECT ---
 const dynamicEl = document.getElementById("student-dynamic");
 const phrases = [
   "Computer science student;",
