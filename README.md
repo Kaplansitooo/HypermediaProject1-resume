@@ -21,7 +21,7 @@ Interactive feedback plays a crucial role: hover effects slightly enlarge elemen
 
 Overall, the visual composition successfully integrates design aesthetics with technical symbolism, expressing both creativity and programming competence—ideal for a computer engineering student portfolio.
 
-
+Project analysis users:
 The website is primarily designed for professionals and recruiters who might come across Ian Kaplan’s profile through platforms such as LinkedIn. These users are typically individuals working in the technology or human resources fields, often seeking young, talented developers or students with creative potential.
 
 User Persona:
