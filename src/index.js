@@ -1,40 +1,45 @@
+// --- CV DOWNLOAD ---
 document.getElementById("download-btn").addEventListener("click", () => {
   const link = document.createElement("a");
-  link.href = "resume.pdf";
-  link.download = "../cvIanKaplan.pdf";
+  link.href = "../cvIanKaplan.pdf";
+  link.download = "cvIanKaplan.pdf";
   link.click();
 });
 
-const circles = document.querySelectorAll('.circle');
-const centerContent = document.getElementById('center-content');
-const defaultCenter = document.getElementById('default-center');
-
-
+// --- CIRCLES BEHAVIOR ---
+const circles = document.querySelectorAll(".circle");
+const defaultCenter = document.getElementById("default-center");
+const dynamicContent = document.getElementById("dynamic-content");
 let activeTimeout = null;
 
-circles.forEach(circle => {
-  circle.addEventListener('mouseenter', () => {
-    const text = circle.getAttribute('data-content');
+circles.forEach((circle) => {
+  circle.addEventListener("mouseenter", () => {
+    const text = circle.getAttribute("data-content");
     if (activeTimeout) clearTimeout(activeTimeout);
-    centerContent.innerHTML = text;
-    centerContent.style.opacity = 1;
+    dynamicContent.innerHTML = text;
+    dynamicContent.style.opacity = 1;
+    defaultCenter.style.opacity = 0;
   });
 
-  circle.addEventListener('mouseleave', () => {
+  circle.addEventListener("mouseleave", () => {
+    if (activeTimeout) clearTimeout(activeTimeout);
+    dynamicContent.style.opacity = 0;
     activeTimeout = setTimeout(() => {
-      centerContent.style.opacity = 0;
       defaultCenter.style.opacity = 1;
-    });
+    }, 300);
   });
 });
 
-const dynamicEl = document.getElementById('student-dynamic');
+// --- DYNAMIC TYPING EFFECT ---
+const dynamicEl = document.getElementById("student-dynamic");
 const phrases = [
   "Computer science student;",
   "Passionate about technology;",
-  "Always learning and creating;"
+  "Always learning and creating;",
 ];
-let i = 0, j = 0, isDeleting = false;
+let i = 0,
+  j = 0,
+  isDeleting = false;
 
 function typeEffect() {
   const current = phrases[i];
@@ -47,7 +52,7 @@ function typeEffect() {
     j--;
     setTimeout(typeEffect, 50);
   } else if (!isDeleting && j === current.length) {
-    setTimeout(() => isDeleting = true, 1000);
+    setTimeout(() => (isDeleting = true), 1000);
     setTimeout(typeEffect, 1000);
   } else if (isDeleting && j === 0) {
     isDeleting = false;
